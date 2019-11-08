@@ -4,7 +4,7 @@ public class NodoCola {
     
     // Atributos del paciente. 
     private String nombredelpaciente; 
-    private int altura; 
+    private int altura;  // Nota: OJO → 
     private int edad; 
     private String enfermedad; 
     
