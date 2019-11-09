@@ -322,7 +322,7 @@ public class InfoPaciente extends javax.swing.JFrame {
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(13, 13, 13)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jComboBox2, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel10))))
                 .addGap(18, 18, 18)
@@ -346,17 +346,18 @@ public class InfoPaciente extends javax.swing.JFrame {
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
         int seguir=0;
-        try{
+        //try{
             while(seguir==0){
-            limpiar();
             encolar();
             seguir=JOptionPane.showConfirmDialog(null, "Desea agregar otro paciente?");
+            limpiar();
         }
         mostrarCola();
         colaaPila();
-        }catch(NumberFormatException ex){
+        mostrarPila();
+        /*}catch(NumberFormatException ex){
             JOptionPane.showMessageDialog(null, "Error de numero!"+ex.getMessage(), "ERROR", JOptionPane.ERROR_MESSAGE);
-        }        
+        }       */ 
     }//GEN-LAST:event_jButton3ActionPerformed
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
