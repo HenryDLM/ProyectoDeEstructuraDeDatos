@@ -5,20 +5,24 @@
  * @author Henry
  */
 public class NodoCola {
-   
+   // Atributos 
     private String nombredelpaciente; 
     private int altura; 
     private int edad; 
     private String enfermedad; 
     private NodoCola returnar; 
-
+  // Redefinimos los atributos
     public NodoCola(String nombre,int alt, int edad,String enfermedad) {
          
          this.nombredelpaciente = nombre; 
          this.altura = alt; 
          this.edad = edad; 
          this.enfermedad = enfermedad; 
-      
+    
+       
+       
+        // utilizamos los el get y el set 
+       // Para modificar y leer 
     }
 
     public String getNombredelpaciente() {
