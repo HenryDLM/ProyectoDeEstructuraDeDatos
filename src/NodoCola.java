@@ -1,77 +1,32 @@
-
-
-/**
- *
- * @author Henry
- */
 public class NodoCola {
    // Atributos 
-    private String nombredelpaciente; 
-    private int altura; 
-    private int edad; 
-    private String enfermedad; 
-    private NodoCola returnar; 
+    private InfoPacientes elementoCola;
+    private NodoCola siguienteCola; 
   // Redefinimos los atributos
-    public NodoCola(String nombre,int alt, int edad,String enfermedad) {
-         
-         this.nombredelpaciente = nombre; 
-         this.altura = alt; 
-         this.edad = edad; 
-         this.enfermedad = enfermedad; 
-    
-       
+    public NodoCola() {
+         this.siguienteCola=null; 
        
         // utilizamos los el get y el set 
        // Para modificar y leer 
     }
 
-    public String getNombredelpaciente() {
-        return nombredelpaciente;
+    public NodoCola getSiguienteCola() {
+        return siguienteCola;
     }
 
-    public void setNombredelpaciente(String nombredelpaciente) {
-        this.nombredelpaciente = nombredelpaciente;
+    public void setSiguienteCola(NodoCola siguienteCola) {
+        this.siguienteCola = siguienteCola;
     }
 
-    public int getAltura() {
-        return altura;
+    public InfoPacientes getElementoCola() {
+        return elementoCola;
     }
 
-    public void setAltura(int altura) {
-        this.altura = altura;
-    }
-
-    public int getEdad() {
-        return edad;
-    }
-
-    public void setEdad(int edad) {
-        this.edad = edad;
-    }
-
-    public String getEnfermedad() {
-        return enfermedad;
-    }
-
-    public void setEnfermedad(String enfermedad) {
-        this.enfermedad = enfermedad;
-    }
-
-    public NodoCola getReturnar() {
-        return returnar;
-    }
-
-    public void setReturnar(NodoCola returnar) {
-        this.returnar = returnar;
+    public void setElementoCola(InfoPacientes elementoCola) {
+        this.elementoCola = elementoCola;
     }
     
     
-    
- 
-    
-
-  
-
-
-
 }
+
+    
