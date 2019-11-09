@@ -346,7 +346,7 @@ public class InfoPaciente extends javax.swing.JFrame {
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
         int seguir=0;
-        //try{
+        try{
             while(seguir==0){
             encolar();
             seguir=JOptionPane.showConfirmDialog(null, "Desea agregar otro paciente?");
@@ -355,9 +355,9 @@ public class InfoPaciente extends javax.swing.JFrame {
         mostrarCola();
         colaaPila();
         mostrarPila();
-        /*}catch(NumberFormatException ex){
+        }catch(NumberFormatException ex){
             JOptionPane.showMessageDialog(null, "Error de numero!"+ex.getMessage(), "ERROR", JOptionPane.ERROR_MESSAGE);
-        }       */ 
+        }      
     }//GEN-LAST:event_jButton3ActionPerformed
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
