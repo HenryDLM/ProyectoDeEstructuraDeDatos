@@ -25,6 +25,11 @@ public class NodoCola {
     public void setElementoCola(InfoPacientes elementoCola) {
         this.elementoCola = elementoCola;
     }
+
+    @Override
+    public String toString() {
+        return "NodoCola{" + "elementoCola=" + elementoCola + ", siguienteCola=" + siguienteCola + '}';
+    }
     
     
 }
