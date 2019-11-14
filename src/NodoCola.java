@@ -1,6 +1,7 @@
 public class NodoCola {
    // Atributos 
     private InfoPacientes elementoCola;
+    private FarmaciaDato elemento;
     private NodoCola siguienteCola; 
   // Redefinimos los atributos
     public NodoCola() {
@@ -29,6 +30,14 @@ public class NodoCola {
     @Override
     public String toString() {
         return "NodoCola{" + "elementoCola=" + elementoCola + ", siguienteCola=" + siguienteCola + '}';
+    }
+
+    public FarmaciaDato getElemento() {
+        return elemento;
+    }
+
+    public void setElemento(FarmaciaDato elemento) {
+        this.elemento = elemento;
     }
     
     
