@@ -6,6 +6,7 @@ public class Farmacia extends javax.swing.JFrame {
     private NodoCola inicio;
     private NodoCola fin;
     private NodoListaSimple cabeza;
+    private NodoListaDoble inicioLED;
 
     public Farmacia() {
         initComponents();
@@ -34,6 +35,14 @@ public class Farmacia extends javax.swing.JFrame {
             return false;
         }
     }
+    
+    public boolean vaciaLED(){
+        if(inicioLED==null){
+            return true;
+        }else{
+            return false;
+        }
+    }
 
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
@@ -51,6 +60,7 @@ public class Farmacia extends javax.swing.JFrame {
         jButton2 = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
         jButton4 = new javax.swing.JButton();
+        jButton5 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -104,6 +114,16 @@ public class Farmacia extends javax.swing.JFrame {
             }
         });
 
+        jButton5.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jButton5.setText("Ver Lista Entrega Medicamentos Doble");
+        jButton5.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        jButton5.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        jButton5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton5ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -111,36 +131,39 @@ public class Farmacia extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(313, 313, 313)
-                        .addComponent(jLabel1))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(118, 118, 118)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(jLabel3)
-                            .addComponent(jLabel2)
-                            .addComponent(jLabel4))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(jScrollPane1)
-                            .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(213, 213, 213)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(jButton3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGap(121, 121, 121)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createSequentialGroup()
-                                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 168, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 168, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                                .addGap(195, 195, 195)
+                                .addComponent(jLabel1))
+                            .addGroup(layout.createSequentialGroup()
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addComponent(jLabel3)
+                                    .addComponent(jLabel2)
+                                    .addComponent(jLabel4))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(jScrollPane1)
+                                    .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(95, 95, 95)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(jButton3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 168, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                        .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 168, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addComponent(jButton5, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))))
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(305, 305, 305)
+                        .addGap(302, 302, 302)
                         .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 168, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(244, Short.MAX_VALUE))
+                .addContainerGap(241, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(49, 49, 49)
+                .addContainerGap()
                 .addComponent(jLabel1)
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -161,8 +184,10 @@ public class Farmacia extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jButton5, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(21, 21, 21)
                 .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(55, 55, 55))
+                .addContainerGap())
         );
 
         pack();
@@ -188,7 +213,12 @@ public class Farmacia extends javax.swing.JFrame {
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
         mostrarLista();
+        listaSimpleaDoble();
     }//GEN-LAST:event_jButton3ActionPerformed
+
+    private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
+        mostrarListaDoble();
+    }//GEN-LAST:event_jButton5ActionPerformed
 
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
@@ -259,7 +289,7 @@ public class Farmacia extends javax.swing.JFrame {
         if(vaciaC()==false){
             NodoCola aux=inicio;
             while(aux!=null){
-                s=s+"|||| "+aux.getElemento().getFicha()+" | "+aux.getElemento().getNombre()+" | "+aux.getElemento().getMedic()+"|||| ->";
+                s=s+" "+aux.getElemento().getFicha()+" | "+aux.getElemento().getNombre()+" | "+aux.getElemento().getMedic()+" -> ";
                 aux=aux.getSiguienteCola();
             }
             JOptionPane.showMessageDialog(null, "Cola de espera en farmacia:\n\n"+s);
@@ -270,7 +300,7 @@ public class Farmacia extends javax.swing.JFrame {
     
     public void colaaLista(){
         NodoCola aux=inicio;
-        if(aux!=null){
+        while(aux!=null){
             llenarLista(aux.getElemento());
             aux=aux.getSiguienteCola();
         }
@@ -296,12 +326,44 @@ public class Farmacia extends javax.swing.JFrame {
         }               
     }
     
+    public void listaSimpleaDoble(){
+        NodoListaSimple aux=cabeza;
+        while(aux!=null){
+            llenarListaDoble(aux.getElemento());
+            aux=aux.getSiguiente();
+        }
+    }
+    
+    public void llenarListaDoble(FarmaciaDato farm){
+        NodoListaDoble n=new NodoListaDoble();
+        n.setElemento(farm);
+        if(vaciaLED()){
+            inicioLED=n;
+        }else if(farm.getFicha()<inicioLED.getElemento().getFicha()){
+            n.setSiguiente(inicioLED);
+            inicioLED.setAnterior(n);
+            inicioLED=n;
+        }else if(inicioLED.getSiguiente()==null){
+            inicioLED.setSiguiente(n);
+            n.setAnterior(inicioLED);
+        }else{
+            NodoListaDoble aux=inicioLED;
+            while((aux.getSiguiente()!=null)&&(aux.getSiguiente().getElemento().getFicha()<farm.getFicha())){
+                aux=aux.getSiguiente();
+            }
+            n.setSiguiente(aux.getSiguiente());
+            n.setAnterior(aux.getAnterior());
+            aux.setSiguiente(n);
+            n.setAnterior(aux);
+        }
+    }
+    
     public void mostrarLista(){
         String s="";
         if(vaciaL()==false){
             NodoListaSimple aux=cabeza;
             while(aux!=null){
-                s=s+aux.getElemento().getFicha()+"-"+aux.getElemento().getNombre()+"-"+aux.getElemento().getMedic()+"-->";
+                s=s+aux.getElemento().getFicha()+"-"+aux.getElemento().getNombre()+"-"+aux.getElemento().getMedic()+" --> ";
                 aux=aux.getSiguiente();
             }
             JOptionPane.showMessageDialog(null, "La lista contiene:\n"+s);
@@ -309,11 +371,26 @@ public class Farmacia extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(null, "Lista vacía!");
         }
     }
+    
+    public void mostrarListaDoble(){
+        String s="";
+        if(vaciaLED()==false){
+            NodoListaDoble aux=inicioLED;
+            while(aux!=null){
+                s=s+aux.getElemento().getFicha()+"="+aux.getElemento().getNombre()+"="+aux.getElemento().getMedic()+" ==> ";
+                aux=aux.getSiguiente();
+            }
+            JOptionPane.showMessageDialog(null, "La lista enlazada doble contiene:\n"+s);
+        }else{
+            JOptionPane.showMessageDialog(null, "Lista enlazada doble vacia!");
+        }
+    }
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
+    private javax.swing.JButton jButton5;
     private javax.swing.JComboBox<String> jComboBox1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
