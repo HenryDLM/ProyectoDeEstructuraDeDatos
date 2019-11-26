@@ -10,7 +10,7 @@ public class Farmacia extends javax.swing.JFrame {
 
     public Farmacia() {
         initComponents();
-        setTitle("INICIO");
+        setTitle("FARMACIA");
         setSize(805,650);
         setResizable(false);
         setLocationRelativeTo(null);
