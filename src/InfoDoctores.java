@@ -157,20 +157,23 @@ public class InfoDoctores extends javax.swing.JFrame {
         jPanel1.setPreferredSize(new java.awt.Dimension(944, 648));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel1.setText("NOMBRE DEL DOCTOR");
-        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 11, -1, 36));
+        jLabel1.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jLabel1.setText("Nombre del Doctor");
+        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 10, -1, 36));
 
+        jLabel2.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jLabel2.setText("ID");
-        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 62, 21, -1));
+        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 60, 21, -1));
 
-        jLabel3.setText("CANTIDAD DE PACIENTES");
+        jLabel3.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jLabel3.setText("Cantidad de Pacientes");
         jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 100, -1, -1));
-        jPanel1.add(txtNomIns, new org.netbeans.lib.awtextra.AbsoluteConstraints(165, 19, 352, -1));
-        jPanel1.add(txtIdIns, new org.netbeans.lib.awtextra.AbsoluteConstraints(165, 59, 352, -1));
-        jPanel1.add(txtPaciIns, new org.netbeans.lib.awtextra.AbsoluteConstraints(165, 97, 352, -1));
+        jPanel1.add(txtNomIns, new org.netbeans.lib.awtextra.AbsoluteConstraints(197, 19, 320, -1));
+        jPanel1.add(txtIdIns, new org.netbeans.lib.awtextra.AbsoluteConstraints(197, 59, 320, -1));
+        jPanel1.add(txtPaciIns, new org.netbeans.lib.awtextra.AbsoluteConstraints(197, 97, 320, -1));
 
         btnRegistrar.setBackground(new java.awt.Color(51, 51, 255));
-        btnRegistrar.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        btnRegistrar.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         btnRegistrar.setForeground(new java.awt.Color(255, 255, 255));
         btnRegistrar.setText("Registrar");
         btnRegistrar.setBorder(null);
@@ -180,7 +183,7 @@ public class InfoDoctores extends javax.swing.JFrame {
                 btnRegistrarActionPerformed(evt);
             }
         });
-        jPanel1.add(btnRegistrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 200, 100, 40));
+        jPanel1.add(btnRegistrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 140, 120, 40));
 
         txtPanta.setEditable(false);
         txtPanta.setBackground(new java.awt.Color(0, 0, 0));
@@ -200,7 +203,7 @@ public class InfoDoctores extends javax.swing.JFrame {
         jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(535, 11, 510, 231));
 
         btnEliminar.setBackground(new java.awt.Color(51, 51, 255));
-        btnEliminar.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        btnEliminar.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         btnEliminar.setForeground(new java.awt.Color(255, 255, 255));
         btnEliminar.setText("Eliminar ID");
         btnEliminar.setBorder(null);
@@ -210,11 +213,11 @@ public class InfoDoctores extends javax.swing.JFrame {
                 btnEliminarActionPerformed(evt);
             }
         });
-        jPanel1.add(btnEliminar, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 138, 100, 30));
-        jPanel1.add(txtElimina, new org.netbeans.lib.awtextra.AbsoluteConstraints(165, 135, 141, -1));
+        jPanel1.add(btnEliminar, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 140, 100, 40));
+        jPanel1.add(txtElimina, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 140, 141, -1));
 
         jButton3.setBackground(new java.awt.Color(51, 51, 255));
-        jButton3.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        jButton3.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jButton3.setForeground(new java.awt.Color(255, 255, 255));
         jButton3.setText("Volver");
         jButton3.setBorder(null);
@@ -224,10 +227,10 @@ public class InfoDoctores extends javax.swing.JFrame {
                 jButton3ActionPerformed(evt);
             }
         });
-        jPanel1.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 250, 140, 40));
+        jPanel1.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 250, 140, 40));
 
         btnImprimir.setBackground(new java.awt.Color(51, 51, 255));
-        btnImprimir.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        btnImprimir.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         btnImprimir.setForeground(new java.awt.Color(255, 255, 255));
         btnImprimir.setText("Imprimir Lista Doble Circular");
         btnImprimir.setBorder(null);
@@ -238,10 +241,10 @@ public class InfoDoctores extends javax.swing.JFrame {
                 btnImprimirActionPerformed(evt);
             }
         });
-        jPanel1.add(btnImprimir, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 200, 180, 40));
+        jPanel1.add(btnImprimir, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 250, 200, 40));
 
         jButton5.setBackground(new java.awt.Color(51, 51, 255));
-        jButton5.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        jButton5.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jButton5.setForeground(new java.awt.Color(255, 255, 255));
         jButton5.setText("Salir");
         jButton5.setBorder(null);
@@ -254,7 +257,7 @@ public class InfoDoctores extends javax.swing.JFrame {
         jPanel1.add(jButton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(890, 250, 153, 38));
 
         btnImprimir1.setBackground(new java.awt.Color(51, 51, 255));
-        btnImprimir1.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        btnImprimir1.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         btnImprimir1.setForeground(new java.awt.Color(255, 255, 255));
         btnImprimir1.setText("Imprimir Lista Simple Circular");
         btnImprimir1.setBorder(null);
@@ -264,7 +267,7 @@ public class InfoDoctores extends javax.swing.JFrame {
                 btnImprimir1ActionPerformed(evt);
             }
         });
-        jPanel1.add(btnImprimir1, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 200, 180, 40));
+        jPanel1.add(btnImprimir1, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 250, 210, 40));
 
         jPanel2.setBackground(new java.awt.Color(51, 51, 255));
 
@@ -277,8 +280,9 @@ public class InfoDoctores extends javax.swing.JFrame {
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
+                .addGap(328, 328, 328)
                 .addComponent(jLabel4)
-                .addGap(0, 0, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -300,7 +304,8 @@ public class InfoDoctores extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 314, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 332, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
         );
 
         pack();
