@@ -15,7 +15,7 @@ public class InfoPaciente extends javax.swing.JFrame {
         setTitle("INFROMACION PACIENTES");
         setResizable(false);
         setLocationRelativeTo(null);
-        llenarComboFicha();
+        llenarComboFicha(1);
         llenarComboDep();
         this.inicio=null;
         this.fin=null;
@@ -466,17 +466,13 @@ public class InfoPaciente extends javax.swing.JFrame {
         mostrarPila();
     }//GEN-LAST:event_jButton5ActionPerformed
 
-    public void llenarComboFicha(){
-        int numFicha[]=new int[10];
-        int num=1;
-        for(int i=0;i<numFicha.length;i++){
-            numFicha[i]=num;
-            jComboBox1.addItem(String.valueOf(numFicha[i]));     
-            num++;
+    public void llenarComboFicha(int x){
+        int numFicha[]=new int[11];
+        if(x<numFicha.length){
+            numFicha[x]=x;
+            jComboBox1.addItem(String.valueOf(numFicha[x]));     
+            llenarComboFicha(x+1);
         }
-         //for(int i=0;i<numFicha.length;i++){
-              //jComboBox1.addItem(String.valueOf(numFicha[i]));     
-         //}
     }
     
     public void llenarComboDep(){

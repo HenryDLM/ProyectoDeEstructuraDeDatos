@@ -85,7 +85,7 @@ public class InfoDoctores extends javax.swing.JFrame {
         
         }
        }catch(Exception e){
-        JOptionPane.showMessageDialog(null,"Datos erroneos");
+        JOptionPane.showMessageDialog(null,"Datos erroneos!");
        }
     }
     
@@ -101,24 +101,24 @@ public class InfoDoctores extends javax.swing.JFrame {
         }
     }
     
-    public void llenarLSC(InfoDoctor elementoLSC){
+    public void llenarLSC(InfoDoctor dato){
         NodoLSC n=new NodoLSC();
-        n.setElementoLSC(elementoLSC);
+        n.setElementoLSC(dato);
         if(vaciaLSC()){
             inicioLSC=n;
-            finLSC=inicioLSC;
+            finLSC=n;
             finLSC.setSiguienteLSC(inicioLSC);
-        }else if(elementoLSC.getID()<inicioLSC.getElementoLSC().getID()){
+        }else if(dato.getID()<inicioLSC.getElementoLSC().getID()){
             n.setSiguienteLSC(inicioLSC);
             inicioLSC=n;
             finLSC.setSiguienteLSC(inicioLSC);
-        }else if(elementoLSC.getID()>=finLSC.getElementoLSC().getID()){
+        }else if(dato.getID()>=finLSC.getElementoLSC().getID()){
             finLSC.setSiguienteLSC(n);
-            finLSC = finLSC.getSiguienteLSC();
+            finLSC=finLSC.getSiguienteLSC();
             finLSC.setSiguienteLSC(inicioLSC);
         }else{
             NodoLSC aux=inicioLSC;
-            while(aux.getSiguienteLSC().getElementoLSC().getID()<elementoLSC.getID()){
+            while((aux.getSiguienteLSC()!=null)&&(aux.getSiguienteLSC().getElementoLSC().getID()<dato.getID())){
                 aux=aux.getSiguienteLSC();
             }
             n.setSiguienteLSC(aux.getSiguienteLSC());
@@ -141,8 +141,6 @@ public class InfoDoctores extends javax.swing.JFrame {
         btnRegistrar = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
         txtPanta = new javax.swing.JTextArea();
-        btnEliminar = new javax.swing.JButton();
-        txtElimina = new javax.swing.JTextField();
         jButton3 = new javax.swing.JButton();
         btnImprimir = new javax.swing.JButton();
         jButton5 = new javax.swing.JButton();
@@ -183,7 +181,7 @@ public class InfoDoctores extends javax.swing.JFrame {
                 btnRegistrarActionPerformed(evt);
             }
         });
-        jPanel1.add(btnRegistrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 140, 120, 40));
+        jPanel1.add(btnRegistrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 160, 120, 40));
 
         txtPanta.setEditable(false);
         txtPanta.setBackground(new java.awt.Color(0, 0, 0));
@@ -201,20 +199,6 @@ public class InfoDoctores extends javax.swing.JFrame {
         jScrollPane1.setViewportView(txtPanta);
 
         jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(535, 11, 510, 231));
-
-        btnEliminar.setBackground(new java.awt.Color(51, 51, 255));
-        btnEliminar.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        btnEliminar.setForeground(new java.awt.Color(255, 255, 255));
-        btnEliminar.setText("Eliminar ID");
-        btnEliminar.setBorder(null);
-        btnEliminar.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
-        btnEliminar.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnEliminarActionPerformed(evt);
-            }
-        });
-        jPanel1.add(btnEliminar, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 140, 100, 40));
-        jPanel1.add(txtElimina, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 140, 141, -1));
 
         jButton3.setBackground(new java.awt.Color(51, 51, 255));
         jButton3.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
@@ -241,7 +225,7 @@ public class InfoDoctores extends javax.swing.JFrame {
                 btnImprimirActionPerformed(evt);
             }
         });
-        jPanel1.add(btnImprimir, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 250, 200, 40));
+        jPanel1.add(btnImprimir, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 250, 220, 40));
 
         jButton5.setBackground(new java.awt.Color(51, 51, 255));
         jButton5.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
@@ -267,7 +251,7 @@ public class InfoDoctores extends javax.swing.JFrame {
                 btnImprimir1ActionPerformed(evt);
             }
         });
-        jPanel1.add(btnImprimir1, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 250, 210, 40));
+        jPanel1.add(btnImprimir1, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 250, 230, 40));
 
         jPanel2.setBackground(new java.awt.Color(51, 51, 255));
 
@@ -310,13 +294,36 @@ public class InfoDoctores extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-        
+
+    private void btnImprimir1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnImprimir1ActionPerformed
+        imprimirLSC();
+    }//GEN-LAST:event_btnImprimir1ActionPerformed
+
+    private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
+
+        System.exit(0); // metodo para salir
+
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton5ActionPerformed
+
+    private void btnImprimirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnImprimirActionPerformed
+        imprimirLista();
+    }//GEN-LAST:event_btnImprimirActionPerformed
+
+    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+
+        Inicio reg = new Inicio();
+        reg.setVisible(true);
+        dispose();
+
+    }//GEN-LAST:event_jButton3ActionPerformed
+
     private void btnRegistrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRegistrarActionPerformed
         llenarLista();
         limpiar();
         copiarLDCaLSC();
     }//GEN-LAST:event_btnRegistrarActionPerformed
-
+        
     public void imprimirLista(){
         String s="";
         if(vaciaL()==false){
@@ -335,10 +342,10 @@ public class InfoDoctores extends javax.swing.JFrame {
         String s="";
         if(vaciaLSC()==false){
             NodoLSC aux=inicioLSC;
-            s=s+aux.getElementoLSC().getNombre()+"=="+aux.getElementoLSC().getID()+"=="+aux.getElementoLSC().getCantidaddepacientes()+" ==> ";
+            s=s+aux.getElementoLSC().getNombre()+"="+aux.getElementoLSC().getID()+"="+aux.getElementoLSC().getCantidaddepacientes()+" => ";
             aux=aux.getSiguienteLSC();
             while(aux!=inicioLSC){
-                s=s+aux.getElementoLSC().getNombre()+"=="+aux.getElementoLSC().getID()+"=="+aux.getElementoLSC().getCantidaddepacientes()+" ==> ";
+                s=s+aux.getElementoLSC().getNombre()+"="+aux.getElementoLSC().getID()+"="+aux.getElementoLSC().getCantidaddepacientes()+" => ";
                 aux=aux.getSiguienteLSC();
             }
             JOptionPane.showMessageDialog(null, "La lista simple circular contiene:\n"+s);
@@ -347,35 +354,6 @@ public class InfoDoctores extends javax.swing.JFrame {
         }
     }
     
-    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-     
-        Inicio reg = new Inicio();
-        reg.setVisible(true);
-          dispose();
-
-        
-    }//GEN-LAST:event_jButton3ActionPerformed
-
-    private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
-       
-        System.exit(0); // metodo para salir 
-
-
-          // TODO add your handling code here:
-    }//GEN-LAST:event_jButton5ActionPerformed
-
-    private void btnImprimirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnImprimirActionPerformed
-        imprimirLista();
-    }//GEN-LAST:event_btnImprimirActionPerformed
-
-    private void btnEliminarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEliminarActionPerformed
-            
-    }//GEN-LAST:event_btnEliminarActionPerformed
-
-    private void btnImprimir1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnImprimir1ActionPerformed
-        imprimirLSC();
-    }//GEN-LAST:event_btnImprimir1ActionPerformed
-
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
@@ -409,7 +387,6 @@ public class InfoDoctores extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btnEliminar;
     private javax.swing.JButton btnImprimir;
     private javax.swing.JButton btnImprimir1;
     private javax.swing.JButton btnRegistrar;
@@ -422,7 +399,6 @@ public class InfoDoctores extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTextField txtElimina;
     private javax.swing.JTextField txtIdIns;
     private javax.swing.JTextField txtNomIns;
     private javax.swing.JTextField txtPaciIns;

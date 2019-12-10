@@ -28,15 +28,6 @@ public class NodoLista {
         this.back = back;
     }
 
-   
- // @Override
-
-   
- @Override
-    public String toString() {
-        return "" + dato ;
-    }
-    
     
 } 
     
