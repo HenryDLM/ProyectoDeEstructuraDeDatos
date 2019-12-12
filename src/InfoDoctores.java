@@ -1,4 +1,5 @@
 
+import java.io.IOException;
 import javax.swing.JOptionPane;
 public class InfoDoctores extends javax.swing.JFrame {
     
@@ -24,7 +25,7 @@ public class InfoDoctores extends javax.swing.JFrame {
         txtNomIns.setText("");
         txtPaciIns.setText("");
     }
-
+    
     public boolean vaciaL(){
         if(cabeza==null){
             return true;
@@ -84,7 +85,7 @@ public class InfoDoctores extends javax.swing.JFrame {
         }
         
         }
-       }catch(Exception e){
+       }catch(Error e){
         JOptionPane.showMessageDialog(null,"Datos erroneos!");
        }
     }
@@ -143,7 +144,6 @@ public class InfoDoctores extends javax.swing.JFrame {
         txtPanta = new javax.swing.JTextArea();
         jButton3 = new javax.swing.JButton();
         btnImprimir = new javax.swing.JButton();
-        jButton5 = new javax.swing.JButton();
         btnImprimir1 = new javax.swing.JButton();
         jPanel2 = new javax.swing.JPanel();
         jLabel4 = new javax.swing.JLabel();
@@ -211,7 +211,7 @@ public class InfoDoctores extends javax.swing.JFrame {
                 jButton3ActionPerformed(evt);
             }
         });
-        jPanel1.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 250, 140, 40));
+        jPanel1.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(750, 250, 140, 40));
 
         btnImprimir.setBackground(new java.awt.Color(51, 51, 255));
         btnImprimir.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
@@ -226,19 +226,6 @@ public class InfoDoctores extends javax.swing.JFrame {
             }
         });
         jPanel1.add(btnImprimir, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 250, 220, 40));
-
-        jButton5.setBackground(new java.awt.Color(51, 51, 255));
-        jButton5.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jButton5.setForeground(new java.awt.Color(255, 255, 255));
-        jButton5.setText("Salir");
-        jButton5.setBorder(null);
-        jButton5.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
-        jButton5.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton5ActionPerformed(evt);
-            }
-        });
-        jPanel1.add(jButton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(890, 250, 153, 38));
 
         btnImprimir1.setBackground(new java.awt.Color(51, 51, 255));
         btnImprimir1.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
@@ -298,13 +285,6 @@ public class InfoDoctores extends javax.swing.JFrame {
     private void btnImprimir1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnImprimir1ActionPerformed
         imprimirLSC();
     }//GEN-LAST:event_btnImprimir1ActionPerformed
-
-    private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
-
-        System.exit(0); // metodo para salir
-
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton5ActionPerformed
 
     private void btnImprimirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnImprimirActionPerformed
         imprimirLista();
@@ -391,7 +371,6 @@ public class InfoDoctores extends javax.swing.JFrame {
     private javax.swing.JButton btnImprimir1;
     private javax.swing.JButton btnRegistrar;
     private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton5;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
